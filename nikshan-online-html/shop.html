@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop | Nikshan Online</title>
+  <meta name="description" content="Buy the latest electronics and home appliances online at the best deals — No Cost EMI and free delivery across India.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="min-h-screen bg-white">
+
+<header class="sticky top-0 z-50 w-full">
+  <div class="hidden bg-slate-900 text-slate-200 md:block">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 text-xs">
+      <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="h-3.5 w-3.5 text-rose-400"></i> Free shipping across India · No Cost EMI</span>
+      <a href="tel:+917558922922" data-testid="header-phone" class="flex items-center gap-1.5 font-medium hover:text-white"><i data-lucide="phone" class="h-3.5 w-3.5 text-rose-400"></i> +91 75589 22922</a>
+    </div>
+  </div>
+
+  <div class="border-b border-gray-200 bg-white/85 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 md:px-6">
+      <a href="index.html" data-testid="logo-link" class="flex shrink-0 items-center gap-0.5">
+        <span class="font-display text-2xl font-black tracking-tight text-slate-900">nikshan</span>
+        <span class="h-2 w-2 translate-y-1 rounded-full bg-rose-600"></span>
+      </a>
+      <form action="shop.html" method="get" class="relative hidden flex-1 md:block">
+        <i data-lucide="search" class="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"></i>
+        <input data-testid="search-input" name="search" placeholder="Search TVs, appliances, Dyson, Bosch…"
+          class="w-full rounded-full border border-gray-200 bg-slate-50 py-2.5 pl-11 pr-4 text-sm outline-none transition-colors focus:border-rose-400 focus:bg-white">
+      </form>
+      <div class="ml-auto flex items-center gap-2">
+        <a href="shop.html?tag=featured" data-testid="deals-link" class="hidden rounded-full px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:text-rose-600 sm:block">Deals</a>
+        <button id="cart-button" data-testid="cart-button"
+          class="relative flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition-[transform,background-color] hover:bg-rose-600 hover:scale-105 active:scale-95">
+          <i data-lucide="shopping-cart" class="h-4 w-4"></i>
+          <span class="hidden sm:inline">Cart</span>
+          <span id="cart-count" data-testid="cart-count" class="absolute -right-1 -top-1 flex hidden h-5 min-w-5 items-center justify-center rounded-full bg-rose-600 px-1 text-[11px] font-bold text-white ring-2 ring-white"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mx-auto hidden max-w-7xl items-center gap-5 px-6 pb-2 text-sm md:flex">
+      <div class="relative" data-pop>
+        <button id="allcat-trigger" data-testid="all-categories-trigger"
+          data-open-class="bg-slate-900 text-white" data-closed-class="text-slate-900 hover:bg-slate-100"
+          class="flex items-center gap-1.5 rounded-full px-3 py-1.5 font-semibold transition-colors text-slate-900 hover:bg-slate-100">
+          <i data-lucide="menu" class="h-4 w-4"></i> All Categories <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform"></i>
+        </button>
+        <div id="allcat-panel" data-testid="all-categories-menu"
+          class="absolute left-0 top-full z-50 mt-2.5 hidden w-[min(860px,92vw)] overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_30px_70px_rgb(15,23,42,0.18)]">
+          <div class="grid grid-cols-[260px_1fr]">
+            <ul id="allcat-list" class="border-r border-gray-100 bg-slate-50 p-3"></ul>
+            <div id="allcat-detail" class="flex flex-col p-6"></div>
+          </div>
+        </div>
+      </div>
+      <a href="shop.html?category=TV%20%26%20Home%20Entertainment" class="text-slate-600 transition-colors hover:text-rose-600">TV &amp; Home Entertainment</a>
+      <a href="shop.html?category=Home%20Appliances" class="text-slate-600 transition-colors hover:text-rose-600">Home Appliances</a>
+      <a href="shop.html?category=Kitchen%20Appliances" class="text-slate-600 transition-colors hover:text-rose-600">Kitchen Appliances</a>
+      <a href="shop.html?category=Cookware" class="text-slate-600 transition-colors hover:text-rose-600">Cookware</a>
+      <div class="relative ml-auto" data-pop>
+        <button id="more-trigger" data-testid="more-menu-trigger"
+          data-open-class="bg-slate-900 text-white" data-closed-class="text-slate-700 hover:bg-slate-100"
+          class="flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-semibold transition-colors text-slate-700 hover:bg-slate-100">
+          More <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform"></i>
+        </button>
+        <div id="more-panel" data-testid="more-menu"
+          class="absolute right-0 top-full z-50 mt-2.5 hidden w-[min(560px,92vw)] rounded-3xl border border-gray-100 bg-white p-5 shadow-[0_30px_70px_rgb(15,23,42,0.18)]">
+          
+<div class="grid grid-cols-2 gap-5">
+  <div>
+    <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Offers</p>
+    <ul class="space-y-1">
+      
+<li><a href="shop.html?sort=discount" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="badge-percent" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Top Deals</span><span class="block text-xs text-slate-500">Biggest discounts</span></span>
+</a></li>
+      
+<li><a href="shop.html?tag=under299" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="tag" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Under ₹299</span><span class="block text-xs text-slate-500">Everyday steals</span></span>
+</a></li>
+      
+<li><a href="shop.html?tag=premium" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="crown" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Premium Picks</span><span class="block text-xs text-slate-500">Flagship products</span></span>
+</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">More categories</p>
+    <ul class="space-y-1">
+      
+<li><a href="shop.html?category=Mobiles%20%26%20Gadgets" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="smartphone" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Mobiles &amp; Gadgets</span></span>
+</a></li>
+      
+<li><a href="shop.html?category=Laptops%20%26%20Accessories" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="laptop" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Laptops &amp; Accessories</span></span>
+</a></li>
+      
+<li><a href="shop.html?category=Audio%20%26%20Speakers" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="speaker" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Audio &amp; Speakers</span></span>
+</a></li>
+      
+<li><a href="shop.html?category=Personal%20Care" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="sparkles" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Personal Care</span></span>
+</a></li>
+    </ul>
+  </div>
+</div>
+<div class="mt-4 border-t border-gray-100 pt-4">
+  <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Shop by brand</p>
+  <div class="flex flex-wrap gap-2"><a href="shop.html?brand=APPLE" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">APPLE</a><a href="shop.html?brand=SAMSUNG" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">SAMSUNG</a><a href="shop.html?brand=SONY" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">SONY</a><a href="shop.html?brand=LG" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">LG</a><a href="shop.html?brand=DYSON" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">DYSON</a><a href="shop.html?brand=JBL" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">JBL</a></div>
+</div>
+<div class="mt-4 flex items-center justify-between rounded-2xl bg-slate-900 px-4 py-3 text-white">
+  <span class="flex items-center gap-2 text-xs"><i data-lucide="truck" class="h-4 w-4 text-rose-300"></i> Free delivery across India</span>
+  <a href="tel:+917558922922" class="flex items-center gap-1.5 text-xs font-bold hover:text-rose-300"><i data-lucide="phone" class="h-3.5 w-3.5"></i> +91 75589 22922</a>
+</div>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="border-b border-gray-200 bg-white px-4 py-2 md:hidden">
+    <form action="shop.html" method="get" class="relative">
+      <i data-lucide="search" class="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"></i>
+      <input name="search" placeholder="Search products…"
+        class="w-full rounded-full border border-gray-200 bg-slate-50 py-2.5 pl-11 pr-4 text-sm outline-none focus:border-rose-400 focus:bg-white">
+    </form>
+  </div>
+</header>
+
+
+<main id="shop" class="mx-auto max-w-7xl px-6 py-10">
+  <div class="mb-6 flex flex-col gap-4 border-b border-gray-100 pb-5 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+      <span class="text-xs font-bold uppercase tracking-[0.2em] text-rose-600">Shop</span>
+      <h1 id="shop-title" data-testid="shop-title" class="mt-1 font-display text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">All Products</h1>
+      <p id="shop-count" class="mt-1 text-sm text-slate-500">0 products</p>
+    </div>
+    <div class="flex items-center gap-2">
+      <i data-lucide="sliders-horizontal" class="h-4 w-4 text-slate-400"></i>
+      <select id="sort-select" data-testid="sort-select" class="h-10 w-[180px] cursor-pointer rounded-full border border-input bg-white px-4 text-sm outline-none focus:ring-1 focus:ring-ring">
+        <option value="popular">Most Popular</option>
+        <option value="discount">Biggest Discount</option>
+        <option value="price_asc">Price: Low to High</option>
+        <option value="price_desc">Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+  <div class="grid gap-8 lg:grid-cols-[220px_1fr]">
+    <aside class="hidden lg:block">
+      <h3 class="font-display text-sm font-bold uppercase tracking-widest text-slate-900">Categories</h3>
+      <ul id="shop-cats" class="mt-3 space-y-1"></ul>
+    </aside>
+    <div id="shop-grid"></div>
+  </div>
+</main>
+
+
+<footer class="bg-slate-950 text-slate-300">
+  <div class="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+    <div>
+      <div class="flex items-center gap-0.5">
+        <span class="font-display text-2xl font-black tracking-tight text-white">nikshan</span>
+        <span class="h-2 w-2 translate-y-1 rounded-full bg-rose-500"></span>
+      </div>
+      <p class="mt-4 max-w-xs text-sm text-slate-400">Buy the latest electronics and home appliances online at the best deals — with No Cost EMI and free delivery across India.</p>
+      <div class="mt-5 space-y-2 text-sm">
+        <a href="tel:+917558922922" class="flex items-center gap-2 hover:text-white"><i data-lucide="phone" class="h-4 w-4 text-rose-500"></i> +91 75589 22922</a>
+        <a href="mailto:support@nikshanonline.com" class="flex items-center gap-2 hover:text-white"><i data-lucide="mail" class="h-4 w-4 text-rose-500"></i> support@nikshanonline.com</a>
+        <span class="flex items-center gap-2"><i data-lucide="map-pin" class="h-4 w-4 text-rose-500"></i> Shipping across India</span>
+      </div>
+    </div>
+    
+<div>
+  <h4 class="font-display text-sm font-bold uppercase tracking-widest text-white">Shop</h4>
+  <ul class="mt-4 space-y-2 text-sm"><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">TV &amp; Home Entertainment</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Home Appliances</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Kitchen Appliances</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Cookware</a></li></ul>
+</div>
+    
+<div>
+  <h4 class="font-display text-sm font-bold uppercase tracking-widest text-white">Brands</h4>
+  <ul class="mt-4 space-y-2 text-sm"><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">VU</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Dyson</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Bosch</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">LG</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Haier</a></li></ul>
+</div>
+    
+<div>
+  <h4 class="font-display text-sm font-bold uppercase tracking-widest text-white">Help</h4>
+  <ul class="mt-4 space-y-2 text-sm"><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Track Order</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">No Cost EMI</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Shipping &amp; Delivery</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Returns</a></li></ul>
+</div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-5 text-xs text-slate-500 sm:flex-row">
+      <span>© <span data-year></span> Nikshan Online. All rights reserved.</span>
+      <span>Free All-India Delivery · No Cost EMI · Genuine Products</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<div id="cart-overlay" class="fixed inset-0 z-[60] hidden bg-black/80 transition-opacity"></div>
+<aside id="cart-drawer" data-testid="cart-drawer" aria-hidden="true"
+  class="fixed inset-y-0 right-0 z-[70] flex h-full w-full translate-x-full flex-col bg-white shadow-lg transition-transform duration-300 ease-in-out sm:max-w-md">
+  <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+    <h2 class="flex items-center gap-2 font-display text-xl font-semibold"><i data-lucide="shopping-bag" class="h-5 w-5 text-rose-600"></i> Your Cart
+      <span id="cart-title-count" class="text-sm font-normal text-slate-400">(0 items)</span></h2>
+    <button id="cart-close" aria-label="Close cart" class="rounded-sm opacity-70 transition-opacity hover:opacity-100"><i data-lucide="x" class="h-4 w-4"></i></button>
+  </div>
+  <div id="cart-body" class="flex flex-1 flex-col overflow-hidden"></div>
+</aside>
+<div id="toast" class="pointer-events-none fixed left-1/2 top-4 z-[80] flex -translate-x-1/2 flex-col items-center gap-2"></div>
+
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
