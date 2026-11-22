@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nikshan Online | Latest Electronics at the Best Deals</title>
+  <meta name="description" content="Buy the latest electronics and home appliances online at the best deals — No Cost EMI and free delivery across India.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/home-v2.css">
+</head>
+<body class="v2">
+<div class="min-h-screen bg-white">
+
+<header class="sticky top-0 z-50 w-full">
+  <div class="hidden bg-slate-900 text-slate-200 md:block">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 text-xs">
+      <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="h-3.5 w-3.5 text-rose-400"></i> Free shipping across India · No Cost EMI</span>
+      <a href="tel:+917558922922" data-testid="header-phone" class="flex items-center gap-1.5 font-medium hover:text-white"><i data-lucide="phone" class="h-3.5 w-3.5 text-rose-400"></i> +91 75589 22922</a>
+    </div>
+  </div>
+
+  <div class="border-b border-gray-200 bg-white/85 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 md:px-6">
+      <a href="index-v2.html" data-testid="logo-link" class="flex shrink-0 items-center gap-0.5">
+        <img src="assets/images/nikshan-logo.png" alt="Nikshan" width="1000" height="206" style="display: block; width: 156px; height: auto;">
+      </a>
+      <form action="shop.html" method="get" class="relative hidden flex-1 md:block">
+        <i data-lucide="search" class="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"></i>
+        <input data-testid="search-input" name="search" placeholder="Search TVs, appliances, Dyson, Bosch…"
+          class="w-full rounded-full border border-gray-200 bg-slate-50 py-2.5 pl-11 pr-4 text-sm outline-none transition-colors focus:border-rose-400 focus:bg-white">
+      </form>
+      <div class="ml-auto flex items-center gap-2">
+        <a href="shop.html?tag=featured" data-testid="deals-link" class="hidden rounded-full px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:text-rose-600 sm:block">Deals</a>
+        <button id="cart-button" data-testid="cart-button"
+          class="relative flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition-[transform,background-color] hover:bg-rose-600 hover:scale-105 active:scale-95">
+          <i data-lucide="shopping-cart" class="h-4 w-4"></i>
+          <span class="hidden sm:inline">Cart</span>
+          <span id="cart-count" data-testid="cart-count" class="absolute -right-1 -top-1 flex hidden h-5 min-w-5 items-center justify-center rounded-full bg-rose-600 px-1 text-[11px] font-bold text-white ring-2 ring-white"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mx-auto hidden max-w-7xl items-center gap-5 px-6 pb-2 text-sm md:flex">
+      <div class="relative" data-pop>
+        <button id="allcat-trigger" data-testid="all-categories-trigger"
+          data-open-class="bg-slate-900 text-white" data-closed-class="text-slate-900 hover:bg-slate-100"
+          class="flex items-center gap-1.5 rounded-full px-3 py-1.5 font-semibold transition-colors text-slate-900 hover:bg-slate-100">
+          <i data-lucide="menu" class="h-4 w-4"></i> All Categories <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform"></i>
+        </button>
+        <div id="allcat-panel" data-testid="all-categories-menu"
+          class="absolute left-0 top-full z-50 mt-2.5 hidden w-[min(860px,92vw)] overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_30px_70px_rgb(15,23,42,0.18)]">
+          <div class="grid grid-cols-[260px_1fr]">
+            <ul id="allcat-list" class="border-r border-gray-100 bg-slate-50 p-3"></ul>
+            <div id="allcat-detail" class="flex flex-col p-6"></div>
+          </div>
+        </div>
+      </div>
+      <a href="shop.html?category=TV%20%26%20Home%20Entertainment" class="text-slate-600 transition-colors hover:text-rose-600">TV &amp; Home Entertainment</a>
+      <a href="shop.html?category=Home%20Appliances" class="text-slate-600 transition-colors hover:text-rose-600">Home Appliances</a>
+      <a href="shop.html?category=Kitchen%20Appliances" class="text-slate-600 transition-colors hover:text-rose-600">Kitchen Appliances</a>
+      <a href="shop.html?category=Cookware" class="text-slate-600 transition-colors hover:text-rose-600">Cookware</a>
+      <div class="relative ml-auto" data-pop>
+        <button id="more-trigger" data-testid="more-menu-trigger"
+          data-open-class="bg-slate-900 text-white" data-closed-class="text-slate-700 hover:bg-slate-100"
+          class="flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-semibold transition-colors text-slate-700 hover:bg-slate-100">
+          More <i data-lucide="chevron-down" class="h-3.5 w-3.5 transition-transform"></i>
+        </button>
+        <div id="more-panel" data-testid="more-menu"
+          class="absolute right-0 top-full z-50 mt-2.5 hidden w-[min(560px,92vw)] rounded-3xl border border-gray-100 bg-white p-5 shadow-[0_30px_70px_rgb(15,23,42,0.18)]">
+          
+<div class="grid grid-cols-2 gap-5">
+  <div>
+    <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Offers</p>
+    <ul class="space-y-1">
+      
+<li><a href="shop.html?sort=discount" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="badge-percent" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Top Deals</span><span class="block text-xs text-slate-500">Biggest discounts</span></span>
+</a></li>
+      
+<li><a href="shop.html?tag=under299" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="tag" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Under ₹299</span><span class="block text-xs text-slate-500">Everyday steals</span></span>
+</a></li>
+      
+<li><a href="shop.html?tag=premium" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="crown" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Premium Picks</span><span class="block text-xs text-slate-500">Flagship products</span></span>
+</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">More categories</p>
+    <ul class="space-y-1">
+      
+<li><a href="shop.html?category=Mobiles%20%26%20Gadgets" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="smartphone" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Mobiles &amp; Gadgets</span></span>
+</a></li>
+      
+<li><a href="shop.html?category=Laptops%20%26%20Accessories" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="laptop" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Laptops &amp; Accessories</span></span>
+</a></li>
+      
+<li><a href="shop.html?category=Audio%20%26%20Speakers" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="speaker" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Audio &amp; Speakers</span></span>
+</a></li>
+      
+<li><a href="shop.html?category=Personal%20Care" class="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-slate-50">
+  <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-rose-50 text-rose-600 transition-colors group-hover:bg-rose-600 group-hover:text-white"><i data-lucide="sparkles" class="h-4 w-4"></i></span>
+  <span><span class="block text-sm font-semibold text-slate-900">Personal Care</span></span>
+</a></li>
+    </ul>
+  </div>
+</div>
+<div class="mt-4 border-t border-gray-100 pt-4">
+  <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Shop by brand</p>
+  <div class="flex flex-wrap gap-2"><a href="shop.html?brand=APPLE" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">APPLE</a>
+<a href="shop.html?brand=SAMSUNG" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">SAMSUNG</a>
+<a href="shop.html?brand=SONY" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">SONY</a>
+<a href="shop.html?brand=LG" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">LG</a>
+<a href="shop.html?brand=DYSON" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">DYSON</a>
+<a href="shop.html?brand=JBL" class="rounded-full border border-gray-200 px-3 py-1 text-[11px] font-bold tracking-widest text-slate-700 transition-colors hover:border-slate-900 hover:bg-slate-900 hover:text-white">JBL</a></div>
+</div>
+<div class="mt-4 flex items-center justify-between rounded-2xl bg-slate-900 px-4 py-3 text-white">
+  <span class="flex items-center gap-2 text-xs"><i data-lucide="truck" class="h-4 w-4 text-rose-300"></i> Free delivery across India</span>
+  <a href="tel:+917558922922" class="flex items-center gap-1.5 text-xs font-bold hover:text-rose-300"><i data-lucide="phone" class="h-3.5 w-3.5"></i> +91 75589 22922</a>
+</div>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="border-b border-gray-200 bg-white px-4 py-2 md:hidden">
+    <form action="shop.html" method="get" class="relative">
+      <i data-lucide="search" class="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"></i>
+      <input name="search" placeholder="Search products…"
+        class="w-full rounded-full border border-gray-200 bg-slate-50 py-2.5 pl-11 pr-4 text-sm outline-none focus:border-rose-400 focus:bg-white">
+    </form>
+  </div>
+</header>
+
+
+<main id="storefront">
+  <section class="offers shell" aria-label="Featured offers">
+    <article class="cinema">
+      <img class="cinema-photo" src="https://images.unsplash.com/photo-1593784991251-92ded75ea290?auto=format&amp;fit=crop&amp;w=1500&amp;q=85" alt="Sony Bravia TV in a living room" fetchpriority="high">
+      <div class="cinema-copy">
+        <p class="eyebrow"><i data-lucide="zap"></i> Festival of deals is live</p>
+        <h1 class="section-title">Cinema,<br><em>delivered home.</em></h1>
+        <p class="spec">Sony Bravia 75″ 4K Ultra HD LED Google TV — XR Processor, Dolby Vision &amp; Acoustic Multi-Audio.</p>
+        <div class="buy-row"><a class="cta" href="shop.html?category=TV%20%26%20Home%20Entertainment">Shop TVs <span aria-hidden="true">↗</span></a><p><strong>₹1,89,900</strong> <del>₹2,49,900</del></p></div>
+      </div>
+    </article>
+    <article class="phone-offer">
+      <img src="https://customer-assets-jt897jd0.emergentagent.net/job_nikshan-deals--554odrie/artifacts/d719c157e9879487_Screenshot%202026-11-21%20at%208.14.57%E2%80%AFPM.png" alt="Apple iPhone 18 Pro">
+      <div><p class="eyebrow">Just launched</p><h2 class="section-title">The iPhone 18 Pro <em>is here.</em></h2><p>A19 Pro chip, ProMotion display and a 5x Telephoto camera — in forged titanium.</p><p class="offer-price">From ₹1,34,900 · No Cost EMI</p><a href="shop.html?search=iPhone%2018%20Pro">Buy iPhone 18 Pro ↗</a></div>
+    </article>
+    <article class="steals"><p class="eyebrow">Everyday steals</p><h2 class="section-title">Smart picks<br><em>under ₹299.</em></h2><p>Cables, earphones, cases &amp; daily essentials.</p><a href="shop.html?tag=under299">Shop under ₹299 ↗</a></article>
+  </section>
+<section class="perks mx-auto max-w-7xl px-6">
+  <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
+    
+<a href="shop.html?tag=featured" class="group flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgb(15,23,42,0.08)]">
+  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white bg-rose-600"><i data-lucide="badge-percent" class="h-5 w-5"></i></span>
+  <div class="min-w-0"><p class="truncate text-sm font-bold text-slate-900">Festival of Deals</p><p class="truncate text-xs text-slate-500">Lowest prices of the season</p></div>
+</a>
+    
+<a href="shop.html" class="group flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgb(15,23,42,0.08)]">
+  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white bg-slate-900"><i data-lucide="credit-card" class="h-5 w-5"></i></span>
+  <div class="min-w-0"><p class="truncate text-sm font-bold text-slate-900">No Cost EMI</p><p class="truncate text-xs text-slate-500">Easy monthly instalments</p></div>
+</a>
+    
+<a href="shop.html?tag=under299" class="group flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgb(15,23,42,0.08)]">
+  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white bg-amber-500"><i data-lucide="tag" class="h-5 w-5"></i></span>
+  <div class="min-w-0"><p class="truncate text-sm font-bold text-slate-900">Under ₹299</p><p class="truncate text-xs text-slate-500">Everyday steals</p></div>
+</a>
+    
+<a href="shop.html" class="group flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgb(15,23,42,0.08)]">
+  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white bg-emerald-600"><i data-lucide="truck" class="h-5 w-5"></i></span>
+  <div class="min-w-0"><p class="truncate text-sm font-bold text-slate-900">Free Shipping</p><p class="truncate text-xs text-slate-500">Delivered across India</p></div>
+</a>
+  </div>
+</section>
+<section class="shell browse" id="popular-categories" aria-labelledby="categories-heading">
+    <div class="edit-heading">
+      <h2 id="categories-heading" class="section-title">Popular <em>categories</em></h2>
+      <a href="shop.html">Shop all <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="edit-filters" role="group" aria-label="Filter departments">
+      <button type="button" data-family="all" aria-pressed="true">All departments</button>
+      <button type="button" data-family="tech" aria-pressed="false">Tech &amp; entertainment</button>
+      <button type="button" data-family="living" aria-pressed="false">Home &amp; living</button>
+    </div>
+    <div class="edit-grid">
+      <article class="edit-card" data-family="tech" data-department="TV &amp; Home Entertainment">
+        <a class="edit-cover" href="shop.html?category=TV%20%26%20Home%20Entertainment">
+          <img loading="lazy" src="https://images.pexels.com/photos/5002337/pexels-photo-5002337.jpeg" alt="">
+          <span class="edit-count"></span>
+          <span class="edit-caption"><strong>TV &amp; Home Entertainment</strong><small></small></span>
+          <span class="edit-open" aria-hidden="true">↗</span>
+        </a>
+      </article>
+      <article class="edit-card" data-family="tech" data-department="Mobiles &amp; Gadgets">
+        <a class="edit-cover" href="shop.html?category=Mobiles%20%26%20Gadgets">
+          <img loading="lazy" src="https://images.pexels.com/photos/32912307/pexels-photo-32912307.jpeg" alt="">
+          <span class="edit-count"></span>
+          <span class="edit-caption"><strong>Mobiles &amp; Gadgets</strong><small></small></span>
+          <span class="edit-open" aria-hidden="true">↗</span>
+        </a>
+      </article>
+      <article class="edit-card" data-family="tech" data-department="Audio &amp; Speakers">
+        <a class="edit-cover" href="shop.html?category=Audio%20%26%20Speakers">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1" alt="">
+          <span class="edit-count"></span>
+          <span class="edit-caption"><strong>Audio &amp; Speakers</strong><small></small></span>
+          <span class="edit-open" aria-hidden="true">↗</span>
+        </a>
+      </article>
+      <article class="edit-card" data-family="tech" data-department="Laptops &amp; Accessories">
+        <a class="edit-cover" href="shop.html?category=Laptops%20%26%20Accessories">
+          <img loading="lazy" src="https://images.pexels.com/photos/11129922/pexels-photo-11129922.jpeg" alt="">
+          <span class="edit-count"></span>
+          <span class="edit-caption"><strong>Laptops &amp; Accessories</strong><small></small></span>
+          <span class="edit-open" aria-hidden="true">↗</span>
+        </a>
+      </article>
+      <article class="edit-card" data-family="living" data-department="Home Appliances">
+        <a class="edit-cover" href="shop.html?category=Home%20Appliances">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c" alt="">
+          <span class="edit-count"></span>
+          <span class="edit-caption"><strong>Home Appliances</strong><small></small></span>
+          <span class="edit-open" aria-hidden="true">↗</span>
+        </a>
+      </article>
+      <article class="edit-card" data-family="living" data-department="Kitchen Appliances">
+        <a class="edit-cover" href="shop.html?category=Kitchen%20Appliances">
+          <img loading="lazy" src="https://images.pexels.com/photos/18071814/pexels-photo-18071814.jpeg" alt="">
+          <span class="edit-count"></span>
+          <span class="edit-caption"><strong>Kitchen Appliances</strong><small></small></span>
+          <span class="edit-open" aria-hidden="true">↗</span>
+        </a>
+      </article>
+      <article class="edit-card" data-family="living" data-department="Personal Care">
+        <a class="edit-cover" href="shop.html?category=Personal%20Care">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1727364438136-6edc10ef0a52" alt="">
+          <span class="edit-count"></span>
+          <span class="edit-caption"><strong>Personal Care</strong><small></small></span>
+          <span class="edit-open" aria-hidden="true">↗</span>
+        </a>
+      </article>
+      <article class="edit-card" data-family="living" data-department="Cookware">
+        <a class="edit-cover" href="shop.html?category=Cookware">
+          <img loading="lazy" src="https://images.pexels.com/photos/28726706/pexels-photo-28726706.jpeg" alt="">
+          <span class="edit-count"></span>
+          <span class="edit-caption"><strong>Cookware</strong><small></small></span>
+          <span class="edit-open" aria-hidden="true">↗</span>
+        </a>
+      </article>
+    </div>
+    <template id="category-pick">
+      <a class="edit-pick"><img alt="" loading="lazy"><span><small>Product spotlight</small><b></b></span><strong></strong></a>
+    </template>
+  </section>
+<div class="shell"><section class="collection" id="deals" data-category=""><div class="section-head"><div><p class="eyebrow">Lowest prices</p><h2 class="section-title">Top Deals <em>of the Season</em></h2></div><a href="shop.html?sort=discount">Explore all ↗</a></div><p class="intro">Handpicked price drops across TVs, appliances, audio and more — grab them while they last.</p><p class="makers">HAIER · BOSCH · BOAT · SUJATA</p><div class="products"></div></section>
+</div><div class="department"><div class="shell"><div class="switches" role="group" aria-label="Choose a department"><button type="button" aria-controls="mobiles" aria-pressed="true">Mobiles</button>
+<button type="button" aria-controls="laptops" aria-pressed="false">Laptops</button>
+<button type="button" aria-controls="tvs" aria-pressed="false">TVs</button>
+<button type="button" aria-controls="speakers" aria-pressed="false">Audio</button>
+<button type="button" aria-controls="appliances" aria-pressed="false">Home appliances</button>
+<button type="button" aria-controls="personal" aria-pressed="false">Personal care</button></div>
+<section class="collection" id="mobiles" data-category="Mobiles &amp; Gadgets"><div class="section-head"><div><p class="eyebrow">Latest launches</p><h2 class="section-title">Newest <em>Mobiles &amp; Gadgets</em></h2></div><a href="shop.html?category=Mobiles%20%26%20Gadgets">Explore all ↗</a></div><p class="intro">The newest flagships from Apple, Samsung and Vivo — pro cameras, all-day batteries, No Cost EMI.</p><p class="makers">APPLE · SAMSUNG · VIVO</p><div class="products"></div></section>
+<section hidden class="collection" id="laptops" data-category="Laptops &amp; Accessories"><div class="section-head"><div><p class="eyebrow">Work &amp; play</p><h2 class="section-title">Laptops — <em>MacBook, Gaming &amp; More</em></h2></div><a href="shop.html?category=Laptops%20%26%20Accessories">Explore all ↗</a></div><p class="intro">From the MacBook Pro M4 to RTX gaming rigs — power for work, study and play.</p><p class="makers">APPLE · ASUS · HP · DELL · ACER</p><div class="products"></div></section>
+<section hidden class="collection" id="tvs" data-category="TV &amp; Home Entertainment"><div class="section-head"><div><p class="eyebrow">Big screen</p><h2 class="section-title">TV &amp; Home <em>Entertainment</em></h2></div><a href="shop.html?category=TV%20%26%20Home%20Entertainment">Explore all ↗</a></div><p class="intro">4K QLED and Mini LED Google TVs with Dolby Vision &amp; Atmos — the cinema, in your living room.</p><p class="makers">SONY · LG · VU · HAIER</p><div class="products"></div></section>
+<section hidden class="collection" id="speakers" data-category="Audio &amp; Speakers"><div class="section-head"><div><p class="eyebrow">Turn it up</p><h2 class="section-title">Latest Speakers — <em>JBL, boAt &amp; More</em></h2></div><a href="shop.html?category=Audio%20%26%20Speakers">Explore all ↗</a></div><p class="intro">Portable party speakers and everyday earphones with big, bold sound.</p><p class="makers">JBL · BOAT · MARSHALL</p><div class="products"></div></section>
+<section hidden class="collection" id="appliances" data-category="Home Appliances"><div class="section-head"><div><p class="eyebrow">For every home</p><h2 class="section-title">Washing Machines <em>&amp; Home Appliances</em></h2></div><a href="shop.html?category=Home%20Appliances">Explore all ↗</a></div><p class="intro">Fully-automatic washers, dishwashers and Dyson cleaning — smarter chores for the whole family.</p><p class="makers">LG · SAMSUNG · BOSCH · DYSON · IFB</p><div class="products"></div></section>
+<section hidden class="collection" id="personal" data-category="Personal Care"><div class="section-head"><div><p class="eyebrow">Look &amp; feel great</p><h2 class="section-title">Personal <em>Care</em></h2></div><a href="shop.html?category=Personal%20Care">Explore all ↗</a></div><p class="intro">Salon-grade hair dryers, straighteners and shavers from Dyson, Philips, Braun and Panasonic.</p><p class="makers">DYSON · PHILIPS · BRAUN · PANASONIC</p><div class="products"></div></section>
+</div></div><div class="services shell"><section class="mx-auto max-w-7xl px-6 py-8">
+  <div data-testid="feature-emi" class="relative grid items-center gap-8 overflow-hidden rounded-[2rem] bg-slate-900 px-7 py-10 text-white sm:px-12 lg:grid-cols-[1.2fr_1fr]">
+    <div class="relative flex flex-col gap-4">
+      <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-rose-300"><i data-lucide="credit-card" class="h-7 w-7"></i></span>
+      <h2 class="section-title font-display text-3xl font-black tracking-tight sm:text-4xl">Easy No Cost EMI <em>on big buys.</em></h2>
+      <p class="max-w-md text-slate-300">Split your new phone, laptop or TV into simple monthly instalments — pay nothing extra.</p>
+      <a href="shop.html?tag=premium" data-testid="feature-emi-cta" class="group inline-flex w-fit items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold transition-[transform,background-color] hover:scale-[1.02] active:scale-95 bg-white text-slate-900 hover:bg-rose-600 hover:text-white">Shop on EMI <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i></a>
+    </div>
+    <div class="relative rounded-2xl border border-white/10 bg-white/5 p-6">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-rose-300">Example</p>
+      <p class="mt-2 text-sm text-slate-300">Apple iPhone 18 Pro · ₹1,34,900</p>
+      <p class="mt-3 font-display text-4xl font-black">₹11,242<span class="text-base font-semibold text-slate-400">/month</span></p>
+      <p class="mt-1 text-xs text-slate-400">for 12 months on No Cost EMI</p>
+    </div>
+  </div>
+</section>
+<section class="mx-auto max-w-7xl px-6 py-8">
+  <div data-testid="feature-easy-buy" class="grid items-center gap-8 rounded-[2rem] bg-rose-50 px-7 py-10 sm:px-12 lg:grid-cols-[1fr_1.2fr]">
+    <div class="flex flex-col gap-4">
+      <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-rose-600 shadow-sm"><i data-lucide="shopping-bag" class="h-7 w-7"></i></span>
+      <h2 class="section-title font-display text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Easy to buy, <em>in three taps.</em></h2>
+      <p class="max-w-md text-slate-600">Pick what you love, add it to cart and check out in seconds — no long forms, no fuss.</p>
+      <a href="shop.html" data-testid="feature-easy-buy-cta" class="group inline-flex w-fit items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold transition-[transform,background-color] hover:scale-[1.02] active:scale-95 bg-slate-900 text-white hover:bg-rose-600">Start shopping <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i></a>
+    </div>
+    <div class="grid grid-cols-3 gap-3">
+      
+<div class="flex flex-col items-center gap-2 rounded-2xl bg-white p-5 text-center shadow-sm">
+  <span class="text-xs font-bold text-rose-600">STEP 1</span><i data-lucide="mouse-pointer-click" class="h-7 w-7 text-slate-900"></i>
+  <p class="text-sm font-bold text-slate-900">Pick</p><p class="text-xs text-slate-500">Browse deals</p>
+</div>
+<div class="flex flex-col items-center gap-2 rounded-2xl bg-white p-5 text-center shadow-sm">
+  <span class="text-xs font-bold text-rose-600">STEP 2</span><i data-lucide="shopping-bag" class="h-7 w-7 text-slate-900"></i>
+  <p class="text-sm font-bold text-slate-900">Add to cart</p><p class="text-xs text-slate-500">One tap</p>
+</div>
+<div class="flex flex-col items-center gap-2 rounded-2xl bg-white p-5 text-center shadow-sm">
+  <span class="text-xs font-bold text-rose-600">STEP 3</span><i data-lucide="package-check" class="h-7 w-7 text-slate-900"></i>
+  <p class="text-sm font-bold text-slate-900">Checkout</p><p class="text-xs text-slate-500">Done in seconds</p>
+</div>
+    </div>
+  </div>
+</section>
+</div>
+<section class="shell brands" aria-labelledby="brand-title">
+    <div class="brand-heading">
+      <h2 id="brand-title" class="section-title">Top brands <em>at Nikshan</em></h2>
+      <button class="brand-control" type="button" aria-pressed="false" aria-label="Pause logo animation">Pause</button>
+    </div>
+    <div class="brand-gallery">
+      <div class="brand-lane">
+        <div class="brand-track">
+          <div class="brand-set">
+            <a class="brand-tile" href="shop.html?brand=APPLE"><img src="assets/images/brands/apple.svg" alt="APPLE"></a>
+            <a class="brand-tile" href="shop.html?brand=SAMSUNG"><img src="assets/images/brands/samsung.svg" alt="SAMSUNG"></a>
+            <a class="brand-tile" href="shop.html?brand=VU"><img src="assets/images/brands/vu.png" alt="VU"></a>
+            <a class="brand-tile" href="shop.html?brand=SONY"><img src="assets/images/brands/sony.svg" alt="SONY"></a>
+            <a class="brand-tile" href="shop.html?brand=LG"><img src="assets/images/brands/lg.svg" alt="LG"></a>
+            <a class="brand-tile" href="shop.html?brand=VIVO"><img src="assets/images/brands/vivo.svg" alt="VIVO"></a>
+            <a class="brand-tile" href="shop.html?brand=HAIER"><img src="assets/images/brands/haier.svg" alt="HAIER"></a>
+            <a class="brand-tile" href="shop.html?brand=ASUS"><img src="assets/images/brands/asus.svg" alt="ASUS"></a>
+            <a class="brand-tile" href="shop.html?brand=BOSCH"><img src="assets/images/brands/bosch.svg" alt="BOSCH"></a>
+            <a class="brand-tile" href="shop.html?brand=DYSON"><img src="assets/images/brands/dyson.svg" alt="DYSON"></a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-lane">
+        <div class="brand-track">
+          <div class="brand-set">
+            <a class="brand-tile" href="shop.html?brand=JBL"><img src="assets/images/brands/jbl.png" alt="JBL"></a>
+            <a class="brand-tile" href="shop.html?brand=BOAT"><img src="assets/images/brands/boat.svg" alt="BOAT"></a>
+            <a class="brand-tile" href="shop.html?brand=HP"><img src="assets/images/brands/hp.svg" alt="HP"></a>
+            <a class="brand-tile" href="shop.html?brand=DELL"><img src="assets/images/brands/dell.png" alt="DELL"></a>
+            <a class="brand-tile" href="shop.html?brand=MARSHALL"><img src="assets/images/brands/marshall.png" alt="MARSHALL"></a>
+            <a class="brand-tile" href="shop.html?brand=HAWKINS"><img src="assets/images/brands/hawkins.png" alt="HAWKINS"></a>
+            <a class="brand-tile" href="shop.html?brand=ELECTROLUX"><img src="assets/images/brands/electrolux.svg" alt="ELECTROLUX"></a>
+            <a class="brand-tile" href="shop.html?brand=SUJATA"><img src="assets/images/brands/sujata.png" alt="SUJATA"></a>
+            <a class="brand-tile" href="shop.html?brand=IFB"><img src="assets/images/brands/ifb.svg" alt="IFB"></a>
+            <a class="brand-tile" href="shop.html?brand=PHILIPS"><img src="assets/images/brands/philips.svg" alt="PHILIPS"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- <section class="mx-auto max-w-7xl px-6 py-8">
+  <div data-testid="feature-delivery" class="grid items-center gap-8 rounded-[2rem] border border-emerald-100 bg-emerald-50 px-7 py-10 sm:px-12 lg:grid-cols-[auto_1fr_auto]">
+    <span class="flex h-20 w-20 items-center justify-center rounded-3xl bg-white text-emerald-600 shadow-sm"><i data-lucide="truck" class="h-10 w-10"></i></span>
+    <div>
+      <h2 class="section-title font-display text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Free delivery, <em>all over India.</em></h2>
+      <p class="mt-2 max-w-xl text-slate-600">From metros to small towns — every order ships free and insured to your doorstep.</p>
+    </div>
+    <a href="shop.html" data-testid="feature-delivery-cta" class="group inline-flex w-fit items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold transition-[transform,background-color] hover:scale-[1.02] active:scale-95 bg-slate-900 text-white hover:bg-rose-600">Order now <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i></a>
+  </div>
+</section> -->
+<section class="mx-auto max-w-7xl px-6 pb-4">
+  <div class="grid grid-cols-1 gap-4 rounded-2xl border border-gray-100 bg-white p-6 sm:grid-cols-2 lg:grid-cols-4">
+    
+<div class="flex items-center gap-3">
+  <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-rose-50 text-rose-600"><i data-lucide="truck" class="h-5 w-5"></i></span>
+  <div><p class="text-sm font-bold text-slate-900">Free All-India Delivery</p><p class="text-xs text-slate-500">Fast, insured shipping to your door</p></div>
+</div>
+    
+<div class="flex items-center gap-3">
+  <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-rose-50 text-rose-600"><i data-lucide="credit-card" class="h-5 w-5"></i></span>
+  <div><p class="text-sm font-bold text-slate-900">No Cost EMI</p><p class="text-xs text-slate-500">Flexible instalments on big buys</p></div>
+</div>
+    
+<div class="flex items-center gap-3">
+  <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-rose-50 text-rose-600"><i data-lucide="shield-check" class="h-5 w-5"></i></span>
+  <div><p class="text-sm font-bold text-slate-900">Genuine &amp; Warranted</p><p class="text-xs text-slate-500">100% authentic brand products</p></div>
+</div>
+    
+<div class="flex items-center gap-3">
+  <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-rose-50 text-rose-600"><i data-lucide="headphones" class="h-5 w-5"></i></span>
+  <div><p class="text-sm font-bold text-slate-900">On-Call Support</p><p class="text-xs text-slate-500">+91 75589 22922, every day</p></div>
+</div>
+  </div>
+</section>
+</main><footer class="bg-slate-950 text-slate-300">
+  <div class="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+    <div>
+      <div class="flex items-center gap-0.5">
+        <img src="assets/images/nikshan-logo.png" alt="Nikshan" width="1000" height="206" style="display: block; width: 194px; height: auto; filter: brightness(0) invert(1)">
+      </div>
+      <p class="mt-4 max-w-xs text-sm text-slate-400">Buy the latest electronics and home appliances online at the best deals — with No Cost EMI and free delivery across India.</p>
+      <div class="mt-5 space-y-2 text-sm">
+        <a href="tel:+917558922922" class="flex items-center gap-2 hover:text-white"><i data-lucide="phone" class="h-4 w-4 text-rose-500"></i> +91 75589 22922</a>
+        <a href="mailto:support@nikshanonline.com" class="flex items-center gap-2 hover:text-white"><i data-lucide="mail" class="h-4 w-4 text-rose-500"></i> support@nikshanonline.com</a>
+        <span class="flex items-center gap-2"><i data-lucide="map-pin" class="h-4 w-4 text-rose-500"></i> Shipping across India</span>
+      </div>
+    </div>
+    
+<div>
+  <h4 class="font-display text-sm font-bold uppercase tracking-widest text-white">Shop</h4>
+  <ul class="mt-4 space-y-2 text-sm"><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">TV &amp; Home Entertainment</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Home Appliances</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Kitchen Appliances</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Cookware</a></li></ul>
+</div>
+    
+<div>
+  <h4 class="font-display text-sm font-bold uppercase tracking-widest text-white">Brands</h4>
+  <ul class="mt-4 space-y-2 text-sm"><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">VU</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Dyson</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Bosch</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">LG</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Haier</a></li></ul>
+</div>
+    
+<div>
+  <h4 class="font-display text-sm font-bold uppercase tracking-widest text-white">Help</h4>
+  <ul class="mt-4 space-y-2 text-sm"><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Track Order</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">No Cost EMI</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Shipping &amp; Delivery</a></li><li><a href="shop.html" class="text-slate-400 transition-colors hover:text-white">Returns</a></li></ul>
+</div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-5 text-xs text-slate-500 sm:flex-row">
+      <span>© <span data-year></span> Nikshan Online. All rights reserved.</span>
+      <span>Free All-India Delivery · No Cost EMI · Genuine Products</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<div id="cart-overlay" class="fixed inset-0 z-[60] hidden bg-black/80 transition-opacity"></div>
+<aside id="cart-drawer" data-testid="cart-drawer" aria-hidden="true"
+  class="fixed inset-y-0 right-0 z-[70] flex h-full w-full translate-x-full flex-col bg-white shadow-lg transition-transform duration-300 ease-in-out sm:max-w-md">
+  <div class="flex items-center justify-between border-b border-gray-100 px-5 py-4">
+    <h2 class="flex items-center gap-2 font-display text-xl font-semibold"><i data-lucide="shopping-bag" class="h-5 w-5 text-rose-600"></i> Your Cart
+      <span id="cart-title-count" class="text-sm font-normal text-slate-400">(0 items)</span></h2>
+    <button id="cart-close" aria-label="Close cart" class="rounded-sm opacity-70 transition-opacity hover:opacity-100"><i data-lucide="x" class="h-4 w-4"></i></button>
+  </div>
+  <div id="cart-body" class="flex flex-1 flex-col overflow-hidden"></div>
+</aside>
+<div id="toast" class="pointer-events-none fixed left-1/2 top-4 z-[80] flex -translate-x-1/2 flex-col items-center gap-2"></div>
+
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<template id="catalog-card">
+  <article class="catalog-card">
+    <div class="product-photo"><img loading="lazy" alt=""><span class="saving"></span></div>
+    <div class="product-info">
+      <div class="product-meta"><span class="maker"></span><span class="rating"></span></div>
+      <h3></h3><p class="tagline"></p>
+      <div class="prices"><strong></strong> <del></del></div>
+      <p class="terms">No Cost EMI available</p>
+      <button type="button" class="add">Add to cart <span aria-hidden="true">＋</span></button>
+    </div>
+  </article>
+</template>
+<script>
+  // Matching sets let each row loop without a gap.
+  const brandGallery = document.querySelector('.brands');
+  for (const group of brandGallery.querySelectorAll('.brand-set')) {
+    const copy = group.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    copy.querySelectorAll('a').forEach(link => { link.tabIndex = -1; });
+    group.after(copy);
+  }
+  const motionButton = brandGallery.querySelector('.brand-control');
+  motionButton.addEventListener('click', () => {
+    const paused = brandGallery.toggleAttribute('data-paused');
+    motionButton.setAttribute('aria-pressed', String(paused));
+    motionButton.textContent = paused ? 'Resume' : 'Pause';
+  });
+
+  const currency = new Intl.NumberFormat('en-IN', {style: 'currency', currency: 'INR', maximumFractionDigits: 0});
+
+  const departmentCards = [...document.querySelectorAll('.edit-card')];
+  const departmentFilters = document.querySelectorAll('.edit-filters button');
+  for (const card of departmentCards) {
+    const products = window.NIKSHAN.products.filter(p => p.category === card.dataset.department);
+    if (!products.length) continue;
+    card.querySelector('.edit-count').textContent = products.length + (products.length === 1 ? ' product' : ' products');
+    const lowestPrice = Math.min(...products.map(p => p.price));
+    card.querySelector('.edit-caption small').textContent = 'From ' + currency.format(lowestPrice);
+    const item = products.find(p => p.tags.includes('featured')) || products[0];
+    const pick = document.querySelector('#category-pick').content.cloneNode(true);
+    pick.querySelector('a').href = 'shop.html?search=' + encodeURIComponent(item.name);
+    pick.querySelector('img').src = item.image;
+    pick.querySelector('b').textContent = item.name;
+    pick.querySelector('strong').textContent = currency.format(item.price);
+    card.append(pick);
+  }
+  function showDepartments(family) {
+    const visible = departmentCards.filter(card => family === 'all' || card.dataset.family === family);
+    for (const card of departmentCards) {
+      card.hidden = !visible.includes(card);
+      card.classList.toggle('edit-lead', card === visible[0]);
+      card.classList.toggle('edit-wide', card === visible[3]);
+    }
+    for (const button of departmentFilters) {
+      button.setAttribute('aria-pressed', String(button.dataset.family === family));
+    }
+  }
+  for (const button of departmentFilters) {
+    button.addEventListener('click', () => showDepartments(button.dataset.family));
+  }
+  showDepartments('all');
+
+  const card = document.querySelector('#catalog-card');
+  for (const section of document.querySelectorAll('.collection')) {
+    const category = section.dataset.category;
+    const products = window.NIKSHAN.products.filter(p => !category || p.category === category);
+    const order = category ? 'reviews' : 'discount';
+    products.sort((a, b) => b[order] - a[order]);
+    for (const product of products.slice(0, category ? 4 : 8)) {
+      const item = card.content.cloneNode(true);
+      const find = selector => item.querySelector(selector);
+      find('img').src = product.image;
+      find('img').alt = product.name;
+      find('.saving').textContent = product.discount + '% off';
+      find('.saving').hidden = !product.discount;
+      find('.maker').textContent = product.brand;
+      find('.rating').textContent = '★ ' + product.rating;
+      find('h3').textContent = product.name;
+      find('.tagline').textContent = product.tagline;
+      find('strong').textContent = currency.format(product.price);
+      find('del').textContent = product.mrp > product.price ? currency.format(product.mrp) : '';
+      find('.add').dataset.add = product.slug;
+      find('.add').setAttribute('aria-label', 'Add ' + product.name + ' to cart');
+      section.querySelector('.products').append(item);
+    }
+  }
+  const switches = document.querySelectorAll('.switches button');
+  for (const button of switches) {
+    button.addEventListener('click', () => {
+      for (const choice of switches) {
+        const active = choice === button;
+        choice.setAttribute('aria-pressed', String(active));
+        document.getElementById(choice.getAttribute('aria-controls')).hidden = !active;
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
