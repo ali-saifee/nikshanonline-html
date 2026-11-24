@@ -291,7 +291,7 @@
     let active = 0;
     const renderList = () => {
       list.innerHTML = D.categories.map((c, idx) => `
-        <li><a href="${catHref(c.name)}" data-idx="${idx}" data-testid="menu-cat-${c.slug}" class="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition-colors ${idx === active ? "bg-white font-bold text-slate-900 shadow-sm" : "text-slate-600 hover:text-slate-900"}">
+        <li><a href="${catHref(c.name)}" data-idx="${idx}" aria-current="${idx === active}" data-testid="menu-cat-${c.slug}" class="flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition-colors ${idx === active ? "bg-white font-bold text-slate-900 shadow-sm" : "text-slate-600 hover:text-slate-900"}">
           <span class="flex items-center gap-3"><img src="${esc(c.image)}" alt="" class="h-8 w-8 rounded-lg object-cover">${esc(c.name)}</span>
           <span class="text-xs text-slate-400">${info[c.name]?.count || 0}</span>
         </a></li>`).join("");
@@ -319,15 +319,26 @@
         <a href="${catHref(c.name)}" data-testid="menu-cat-view-all" class="group mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-slate-900 px-5 py-2.5 text-sm font-bold text-white hover:bg-rose-600">Shop ${esc(c.name)} <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i></a>`;
       icons();
     };
-    list.addEventListener("mouseover", (e) => {
-      const a = e.target.closest("[data-idx]");
+    const selectCategory = (a) => {
       if (!a || Number(a.dataset.idx) === active) return;
       active = Number(a.dataset.idx);
       $$("[data-idx]", list).forEach((el) => {
         const on = Number(el.dataset.idx) === active;
+        el.setAttribute("aria-current", String(on));
         el.className = "flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition-colors " + (on ? "bg-white font-bold text-slate-900 shadow-sm" : "text-slate-600 hover:text-slate-900");
       });
       renderDetail();
+      detail.scrollTop = 0;
+    };
+    list.addEventListener("mouseover", (e) => {
+      if (!list.closest("dialog")) selectCategory(e.target.closest("[data-idx]"));
+    });
+    list.addEventListener("click", (e) => {
+      const link = e.target.closest("[data-idx]");
+      if (link && list.closest("dialog")) {
+        e.preventDefault();
+        selectCategory(link);
+      }
     });
     renderList();
     renderDetail();
