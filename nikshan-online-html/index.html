@@ -6,8 +6,9 @@
   <title>Nikshan Online | Latest Electronics at the Best Deals</title>
   <meta name="description" content="Buy the latest electronics and home appliances online at the best deals — No Cost EMI and free delivery across India.">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/home-mobile.css" media="(max-width: 767px)">
 </head>
-<body>
+<body id="page-top">
 <div class="min-h-screen bg-white">
 
 <header class="sticky top-0 z-50 w-full">
@@ -30,6 +31,7 @@
       </form>
       <div class="ml-auto flex items-center gap-2">
         <a href="shop.html?tag=featured" data-testid="deals-link" class="hidden rounded-full px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:text-rose-600 sm:block">Deals</a>
+        <a class="mobile-contact hidden" href="tel:+917558922922"><i data-lucide="phone"></i> Contact</a>
         <button id="cart-button" data-testid="cart-button"
           class="relative flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition-[transform,background-color] hover:bg-rose-600 hover:scale-105 active:scale-95">
           <i data-lucide="shopping-cart" class="h-4 w-4"></i>
@@ -140,7 +142,7 @@
 
 <main id="home">
   
-<section class="mx-auto max-w-[1600px] px-4 pt-6 sm:px-6 lg:px-20">
+<section class="hero-band mx-auto max-w-[1600px] px-4 pt-6 sm:px-6 lg:px-20">
   <div class="relative">
     <div class="relative overflow-hidden rounded-[1.75rem] shadow-[0_24px_60px_rgb(15,23,42,0.14)]">
 
@@ -196,7 +198,7 @@
 
   <div class="pt-2"></div>
   
-<section class="mx-auto max-w-7xl px-6">
+<section class="mobile-offers mx-auto max-w-7xl px-6">
   <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
     
 <a href="shop.html?tag=featured" class="group flex items-center gap-3 rounded-2xl border border-gray-100 bg-white p-4 transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgb(15,23,42,0.08)]">
@@ -221,7 +223,7 @@
   </div>
 </section>
 
-  <section class="mx-auto max-w-7xl px-6 py-14">
+  <section id="popular-categories" class="mx-auto max-w-7xl px-6 py-14">
     <div class="mb-7"><span class="text-xs font-bold uppercase tracking-[0.2em] text-rose-600">Browse</span>
       <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">Popular Categories</h2></div>
     <div id="category-grid" class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"></div>
@@ -363,6 +365,27 @@
 
 </div>
 
+<nav id="mobile-nav" class="hidden" aria-label="Mobile navigation">
+  <a href="#page-top" aria-label="Home" aria-current="page"><i data-lucide="house"></i>Home</a>
+  <button id="mobile-categories-button" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobile-categories"><i data-lucide="layout-grid"></i>Categories</button>
+  <button id="mobile-profile-button" type="button" aria-haspopup="dialog" aria-controls="mobile-profile">
+    <i data-lucide="circle-user-round"></i>Profile
+  </button>
+</nav>
+<dialog id="mobile-categories" aria-labelledby="mobile-categories-title">
+  <div class="categories-heading">
+    <h2 id="mobile-categories-title">All Categories</h2>
+    <form method="dialog"><button aria-label="Close categories" autofocus>&times;</button></form>
+  </div>
+</dialog>
+<dialog id="mobile-profile" aria-labelledby="profile-heading">
+  <form method="dialog"><button aria-label="Close profile" autofocus>Close</button></form>
+  <i data-lucide="circle-user-round" class="profile-avatar"></i>
+  <h2 id="profile-heading">Guest profile</h2>
+  <h3>Your orders on this device</h3>
+  <div id="profile-orders"></div>
+</dialog>
+
 <div id="cart-overlay" class="fixed inset-0 z-[60] hidden bg-black/80 transition-opacity"></div>
 <aside id="cart-drawer" data-testid="cart-drawer" aria-hidden="true"
   class="fixed inset-y-0 right-0 z-[70] flex h-full w-full translate-x-full flex-col bg-white shadow-lg transition-transform duration-300 ease-in-out sm:max-w-md">
@@ -378,5 +401,6 @@
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 <script src="assets/js/data.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/home-mobile.js"></script>
 </body>
 </html>
