@@ -207,6 +207,7 @@
 .edit-caption { position: absolute; bottom: 15px; left: 17px; right: 53px; }
 .edit-caption strong { display: block; font-size: clamp(1.22rem,1.8vw,1.85rem); line-height: 1.03; letter-spacing: -.045em; font-weight: 700; text-wrap: balance; }
 .edit-caption small { display: block; margin-top: 6px; color: #f2ebf3; font-size: .82rem; }
+.v2-arrow { display: inline-block; width: 1em; height: 1em; flex: none; vertical-align: -.1em; }
 .edit-open { position: absolute; right: 13px; bottom: 15px; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #ffffff80; border-radius: 50%; background: #25182b77; transition: background .2s,color .2s; }
 .edit-lead .edit-caption { bottom: 21px; left: 24px; }
 .edit-lead .edit-caption strong { max-width: 13ch; font-size: clamp(2.2rem,3.6vw,3.6rem); }
